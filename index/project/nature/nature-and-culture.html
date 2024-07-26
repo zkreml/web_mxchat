@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style-nature.css" rel="stylesheet" />
+    <title>Hero</title>
+</head>
+
+<body>
+    <!-- Navigace -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Explore</a></li>
+            <li><a href="#">Contact US</a></li>
+        </ul>
+        <img class="icon" src="images/PngItem_1608357.png">
+    </nav>
+
+    <!-- Hero section -->
+    <div class="hero-section">
+        <div class="hero-text">
+            <div class="hero-subtitle">Exploring Icelandic Villages</div>
+            <div class="hero-title">
+                <h1>Nature and Culture Converge</h1>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- image bird -->
+    <div class="image-container">
+        <img src="images/photo-1512419180521-2c5585bdf851.avif" alt="" bird>
+    </div>
+</body>
+
+</html>

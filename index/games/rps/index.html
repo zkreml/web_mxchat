@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="../../../style/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../../res/site/icons/favicon.ico"
+    />
+  </head>
+
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Rock Paper Scissors</h1>
+      <h2 class="project-tagline">Made using Javascript.</h2>
+
+      <a href="../../../" class="btn">Home</a>
+      <a href="../" class="btn">Games</a>
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <section class="game">
+        <div id="gameScore">
+          <p><span id="scorePlayer"></span> <span id="scoreCPU"></span></p>
+          <p><span id="round"></span></p>
+        </div>
+
+        <div>
+          <script src="./script/script.js"></script>
+          <button class="btn gameButton" onclick="play('rock')">🪨</button>
+          <button class="btn gameButton" onclick="play('paper')">📄</button>
+          <button class="btn gameButton" onclick="play('scissors')">✂️</button>
+        </div>
+
+        <div id="evaluation">
+          <p id="choice">
+            <span id="choicePlayer"></span> <span id="choiceCPU"></span>
+          </p>
+          <p><strong id="gameWinner"> </strong></p>
+        </div>
+      </section>
+      <footer class="site-footer">
+        You have reached the end of the page. (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
+      </footer>
+    </main>
+  </body>
+</html>

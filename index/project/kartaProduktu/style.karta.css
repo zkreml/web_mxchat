@@ -1,0 +1,147 @@
+:root {
+  --special-yellow: hsl(56, 94%, 49%);
+  --special-yellow-2: rgb(231, 231, 149);
+  --special-red-original: red;
+  --special-red: #db090d;
+  --special-black: #040303;
+  --special-white: #f7f7f7;
+  --special-green: rgb(0, 128, 0);
+  --special-agua: rgb(8, 126, 126);
+  --special-pink: palevioletred;
+}
+.product-card {
+  position: relative;
+  width: 450px;
+  background-color: var(--special-white);
+  padding: 16px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 6px solid var(--special-black);
+
+  /* responzivita */
+  width: calc(100% - 32px);
+  max-width: 800px;
+  margin: auto;
+}
+
+.whell {
+  position: absolute;
+}
+
+.product-only {
+  background-color: var(--special-yellow);
+  position: absolute;
+  border-radius: 50%;
+  width: 120px;
+  height: 80px;
+  left: 35px;
+  top: 60px;
+  text-align: center;
+  font-size: 25px;
+  color: var(--special-white);
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.discount-badge {
+  background-color: var(--special-red);
+  position: absolute;
+  border-radius: 50%;
+  width: 120px;
+  height: 80px;
+  left: 35px;
+  top: 160px;
+  text-align: center;
+  font-size: 25px;
+  color: var(--special-white);
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.product-image {
+  width: 95%;
+  height: 90%;
+}
+
+h1 {
+  color: var(--special-agua);
+}
+
+.button {
+  color: var(--special-red);
+  border-style: solid;
+  text-decoration: none;
+  padding-right: 6px;
+  padding-left: 6px;
+  border-radius: 6px;
+  background-color: var(--special-yellow-2);
+}
+.product-price-container {
+  padding: 8px;
+  background-color: var(--special-pink);
+  margin-bottom: 16px;
+  position: relative;
+  border-radius: 6px;
+  top: 15px;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size: 40px;
+  display: inline-block;
+  padding: 8px;
+  background-color: var(--special-red-original);
+  border-radius: 6px;
+}
+
+.product-price-old {
+  font-size: 20px;
+  color: var(--special-white);
+  text-decoration: line-through;
+  width: 75px;
+  background-color: var(--special-yellow);
+  margin-top: 1px;
+  margin-bottom: 1px;
+  padding-left: 35px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.shopping-button {
+  color: var(--special-black);
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border-radius: 6px;
+  background-color: var(--special-yellow-2);
+  padding-left: 5px;
+  padding-right: 5px;
+  border-style: solid;
+}
+
+.stock {
+  font-weight: bold;
+  color: var(--special-green);
+  font-size: 20px;
+  padding: 10px;
+}
+
+.transport {
+  padding-left: 135px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.button-container {
+  margin-top: 10px;
+  /* margin-bottom: 15px; */
+}
+
+/* ˇMobily */
+@media screen and (max-width: 600px) {
+  body {
+    width: calc(100% - 16px);
+  }
+}
