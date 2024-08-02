@@ -1,169 +1,79 @@
 <!DOCTYPE html>
 <html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="Kankys Matrix" content="Zásady ochrany osobních údaju." />
-    <title>Zásady ochrany osobních údaju</title>
-    <link rel="stylesheet" href="../../style/style.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="../../res/site/icons/favicon.ico"
-    />
-    <link
-      href="//cdn.jsdelivr.net/npm/font-logos@1/assets/font-logos.css"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body style="cursor: url(../../res/site/icons/archlinux.png), auto">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zásady ochrany osobních údajů</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../../res/site/icons/favicon.ico">
+</head>
+<body>
     <header class="page-header" role="banner">
-      <h1 class="project-name">O mně</h1>
-      <!-- <h2 class="project-tagline">The webmaster.</h2> -->
-
-      <a href="../../" class="btn">Domů</a>
+        <h1 class="project-name">Zásady ochrany osobních údajů</h1>
     </header>
+    <div class="main-content">
+        <h2>Úvod</h2>
+        <p>Vaše soukromí je pro nás důležité. Proto s nimi nejen zacházíme mimořádně důvěrně, ale bereme také vaše právo k informacím velmi vážně. Stanoví to obecné nařízení EU o ochraně osobních údajů (GDPR). Tyto zásady ochrany osobních údajů vysvětlují, jak shromažďujeme, používáme a chráníme vaše osobní údaje.</p>
 
-    <main id="content" class="main-content" role="main">
+        <h2>Přispějte k tomuto dokumentu</h2>
+        <p>Uživatelé jsou vždy více než vítáni, aby přispěli k těmto stránkám. Prosím, kontaktujte nás v komunitní místnosti mxchat.cz nebo přes.</p>
 
-      <p>
-        <strong>
-          <center>Zásady ochrany osobních údajů</center> </strong
-        ><br />
-        Naposledy aktualizováno: 28.4.2022
-      </p>
+        <h2>1. Umístění mxchat.cz a jeho oprávněného personálu</h2>
+        <p>mxchat.cz používá servery v Německu k poskytování svých služeb. Pro nahrávání médií v rámci služby Matrix se používá datové centrum v Německu.</p>
 
-      <p>
-        Pokud jste návštěvníkem našeho blogu, odběratelem novinek,
-        přispěvatelem do komentářů poskytujete nám své osobní údaje. My vaše
-        údaje zpracováváme a za jejich bezpečnost odpovídáme. Slibujeme, že
-        vaše <br />údaje dostatečně chráníme a podřizujeme se požadavkům
-        Nařízení o ochraně osobních údajů (GDPR).
-      </p>
+        <h2>2. Služby třetích stran</h2>
+        <p>Můžete používat klienta, který využívá služby, které nejsou hostovány mxchat.cz, jako například:</p>
+        <ul>
+            <li>Jitsi video webové konference, z funkce videohovoru nebo z integračního manažera (obvykle riot.im, nyní známý jako Element)</li>
+            <li>Samotný integrační manažer (obvykle hostovaný Matrix.org), který poskytuje widgety a boty pro místnosti, které obvykle mohou přistupovat k vašim zprávám a souborům v místnosti, pokud jsou aktivovány.</li>
+            <li>Identitní server (Matrix.org)</li>
+            <li>Klíčový server (Matrix.org)</li>
+        </ul>
 
-      <p>
-        Neprodáváme žádný produkt, nejste tedy našimi zákazníky, ale
-        návštěvníky blogu.
-      </p>
+        <h2>3. Federace</h2>
+        <p>Můžete se účastnit místností a prostorů jiných serverů (podobně jako komunikace s různými poskytovateli e-mailu) nebo v místních místnostech a prostorech s uživateli z jiných serverů. Mxchat.cz nemůže garantovaně kontrolovat, jak tito poskytovatelé mohou nakládat se zprávami a nahranými soubory, které poskytujete přes federaci.</p>
 
-      <p>
-        Správcem vašich osobních údajů je Lukáš (Lucka ani nekouká přes
-        rameno!)<br />
-        Správcem osobních údajů je Lukáš Kaňka, který provozuje webové stránky
-        lukan.cz a lukan.cekuj.net. Lukáš vaše údaje spravuje a určuje, jak
-        dlouho budou osobní údaje zpracovávány, a za jakým účelem. Vybírá
-        <br />také další zpracovatele, které ke zpracování využíváme.
-      </p>
+        <h2>4. Data, která shromažďujeme</h2>
+        <p>Webový server i Matrix homeserver shromažďují data pro účely moderace a logování/debugování. Tato data zahrnují:</p>
+        <ul>
+            <li>Vaši IP adresu</li>
+            <li>Vaši http-referrer (stránku, odkud přicházíte)</li>
+            <li>Vámi používaný software, jako je klient/prohlížeč/zařízení</li>
+            <li>Kdy jste byli naposledy aktivní</li>
+        </ul>
 
-      <p>
-        <strong>Jaké údaje zpracováváme a proč?</strong><br />
-        Vaše osobní údaje zpracováváme především proto, abychom vám mohli
-        poskytovat co nejkvalitnější obsah. Jednotlivé důvody zpracování:
-      </p>
+        <h2>5. Mosty (Bridging)</h2>
+        <p>Některé místnosti používají mosty k připojení k sítím mimo Matrix, jako je IRC, Discord nebo Telegram. Když místnost používá takového bota nebo aplikační službu, zprávy a média jsou kopírovány do připojených sítí. tchncs.cz není odpovědné ani schopné garantovat kontrolu nad daty sdílenými s těmito platformami.</p>
 
-      <p>
-        <strong>Předávání osobních údajů třetím osobám.</strong><br />
-        Vaše údaje zpracovává správce Lukáš Kaňka, s využitím dalších dvou
-        zpracovatelů, společnosti Endora , jejichž zpracování spočívá v
-        uchovávání údajů na zabezpečených cloudových serverech.
-      </p>
+        <h2>6. Doba uchování dat</h2>
+        <p>Většina dat, která poskytujete, na tomto homeserveru vyprší:</p>
+        <ul>
+            <li>Zprávy a nahrávky: 1 rok</li>
+            <li>Logy webového serveru: 7 dní</li>
+            <li>Logy Synapse: 4 dny</li>
+            <li>IP adresa zaznamenaná Matrix homeserverem: 7 dní</li>
+            <li>Poslední doba, kdy jste byli viděni: 7 dní</li>
+        </ul>
 
-      <p>
-        Abychom mohli měřit, jak se vám na našem blogu líbí, kde trávíte
-        nejvíce času a kam klikáte, používáme další poskytovatele služeb pro
-        určité zpracovatelské operace. Jsou to:
-      </p>
+        <h2>7. Zpracování dat</h2>
+        <p>Shromážděná data naším webovým serverem (při používání webového klienta Element na mxchat.cz nebo při přístupu k Matrix homeserveru mxchat.cz), jako je vaše IP adresa, mohou být použita v případě odstraňování problémů nebo pro účely moderace.</p>
 
-      <p>TopList – pomocí měřícího kódu</p>
+        <h2>8. Smazání dat</h2>
+        <p>Pokud si přejete, můžete pomocí svého klienta smazat svůj účet zcela z našeho serveru. Tato akce je v souladu s GDPR a nelze ji vrátit zpět. V takovém případě zůstane pouze vaše uživatelské jméno, aby se zabránilo podvodům a chybám s federací.</p>
+        <p>Pokud se rozhodnete redigovat zprávu, uživatelé na našem serveru nebudou schopni číst její obsah. Nemůžeme však zaručit, že tento požadavek bude splněn vzdálenými servery a službami.</p>
 
-      <p>
-        <strong>Jak nás můžete kontaktovat</strong><br />
-        Ať už na nás máte jakoukoliv otázku nebo požadavek, můžete nás
-        kontaktovat ne e-mailové adrese: lukas.kanka@lukan.cz.
-      </p>
+        <h2>9. Export dat</h2>
+        <p>Můžete požádat o přístup k osobním údajům uloženým na našich serverech nebo je opravit. V závislosti na vašem použití klienta můžete být schopni exportovat potřebné informace, jako je historie chatu, bez nutnosti kontaktovat nás.</p>
 
-      <p>
-        <strong>Předávání vašich dat mimo Evropskou Unii</strong><br />
-        Vaše data zpracováváme výhradně v Evropské unii nebo v zemích, které
-        zajišťují odpovídající úroveň ochrany na základě rozhodnutí Evropské
-        komise.
-      </p>
+        <h2>10. Cookies</h2>
+        <p>Třetí strany zmíněné výše (a níže) mohou umístit cookies potřebné k poskytování jejich funkcí nebo více. V případě webového klienta můžete tyto cookies ovládat pomocí nastavení vašeho prohlížeče. Jinak prosím mějte na paměti zásady ochrany osobních údajů a/nebo zásady cookies aplikace, kterou používáte s naší službou.</p>
 
-      <p>
-        <strong>Zabezpečení a ochrana osobních údajů</strong><br />
-        Vaše data jsou u nás v bezpečí. Přijali jsme technická opatření, která
-        zajišťují zabezpečení osobních údajů šifrováním přenosu dat pomocí
-        HTTPS protokolu (ten zámeček, co je vedle naší URL adresy ;-)) a<br />
-        zabezpečili vaše osobní údaje v souladu s čl. 32 GDPR.
-      </p>
-
-      <p>
-        <strong>Vaše práva v souvislosti s ochranou osobních údajů:</strong>
-      </p>
-
-      <p>
-        V souvislosti s ochranou osobních údajů máte řadu práv. Pokud budete
-        chtít některého z těchto práv využít, prosím, kontaktujte nás
-        prostřednictvím e-mailu: lukas.kanka@lukan.cz
-      </p>
-
-      <p>Máte právo na informace, které si právě teď čtete. 🙂</p>
-
-      <p>
-        Díky právu na přístup nás můžete kdykoli vyzvat a my vám do 30 dnů
-        doložíme, jaké vaše osobní údaje zpracováváme a proč. Pokud se u vás
-        něco změní nebo shledáte své osobní údaje neaktuální nebo<br />
-        neúplné, máte právo na doplnění a změnu osobních údajů.
-      </p>
-
-      <p>
-        Právo na omezení zpracování můžete využít, pokud se domníváte, že
-        zpracováváme vaše nepřesné údaje, domníváte se, že provádíme
-        zpracování nezákonně, ale nechcete všechny údaje smazat nebo pokud
-        jste<br />
-        vznesli námitku proti zpracování. Omezit můžete rozsah osobních údajů
-        nebo účelů zpracování.
-      </p>
-
-      <p><strong>Právo na výmaz (být zapomenut)</strong></p>
-
-      <p>
-        Vaším dalším právem je právo na výmaz (být zapomenut). Nechceme na vás
-        zapomenout, ale pokud si to budete přát, máte na to právo. 😞 V
-        takovém případě vymažeme veškeré vaše osobní údaje ze svého<br />
-        systému i ze systému všech dílčích zpracovatelů a záloh. Na zajištění
-        práva na výmaz potřebujeme 30 dní.
-      </p>
-
-      <p><strong>Stížnost u Úřadu na ochranu osobních údajů</strong></p>
-
-      <p>
-        Pokud máte pocit, že s vašimi údaji nezacházíme v souladu se zákonem,
-        máte právo se se svou stížností kdykoli obrátit na Úřad pro ochranu
-        osobních údajů. Budeme moc rádi, pokud nejprve budete o tomto<br />
-        podezření informovat nás, abychom s tím mohli něco udělat a případné
-        pochybení napravit.
-      </p>
-
-      <p><strong>Mlčenlivost:</strong></p>
-      <p>
-        Jsme povinni zachovávat mlčenlivost o osobních údajích a o
-        bezpečnostních opatřeních, jejichž zveřejnění by ohrozilo zabezpečení
-        vašich osobních údajů. Tato mlčenlivost přitom trvá i po skončení<br />
-        závazkových vztahů s námi. Bez vašeho souhlasu také vaše údaje žádné
-        jiné třetí straně nevydáme.
-      </p>
-
-      <p>Tyto Zásady ochrany osobních údajů nabývají účinnosti 28.4.2022</p>
-
-      
-  
-      <footer class="site-footer">
-        Copyright &copy; Lukáš Kaňka 2024
-      </footer>
-        
-    </main>
-  </body>
+        <h2>11. Změny tohoto dokumentu</h2>
+        <p>Tento dokument může být čas od času aktualizován. V takovém případě homeserver upozorní své uživatele. Aby mohli službu nadále používat, musí si přečíst a souhlasit s novou verzí tohoto dokumentu.</p>
+    </div>
+    <footer class="site-footer">
+        <p style="text-align:center;">Copyright &copy; Oscloud 2024</p>
+    </footer>
+</body>
 </html>

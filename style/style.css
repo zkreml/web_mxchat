@@ -769,4 +769,6 @@ body {
 .news-block h3 {
     margin-top: 0;
 }
-
+.spacer {
+  height: 20px; /* Můžeš upravit hodnotu podle potřeby */
+}
