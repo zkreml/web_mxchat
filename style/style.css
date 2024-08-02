@@ -757,4 +757,16 @@ body {
   text-align: center;
   margin: 0;
 }
+/* Přidejte toto na konec svého CSS souboru */
+.news-block {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 0.3rem;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.news-block h3 {
+    margin-top: 0;
+}
 
