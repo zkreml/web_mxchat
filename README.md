@@ -33,4 +33,4 @@ Přivítáme všechny příspěvky! Pokud chcete přispět, prosím, otevřete i
 
 ## Licence
 
-Tento projekt je licencován pod MIT licencí. Pro více informací si přečtěte [LICENSE](LICENSE).
+Tento projekt je licencován pod licencí GNU General Public License v3.0 - podrobnosti naleznete v souboru [LICENSE](LICENSE).
