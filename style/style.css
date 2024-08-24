@@ -805,3 +805,21 @@ body {
 .spacer {
     height: 20px; /* Můžeš upravit hodnotu podle potřeby */
 }
+.page-header {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
+
+.home-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #000; /* Barva ikony */
+    text-decoration: none;
+}
+
+.home-link:hover {
+    color: #800; /* Barva ikony při hoveru */
+}
