@@ -40,11 +40,33 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
         </a>
     </header>
     <div class="main-content">
-        <p>mxchat.cz podporuje integraci s mnoha dalšími komunikačními platformami pomocí mostů (bridges). Tyto mosty umožňují komunikaci napříč různými platformami přímo z Matrixu. Zde je seznam podporovaných mostů:</p>
+        <p>Most WhatsApp, který máme nainstalovaný, běží na <strong>mautrix-whatsapp</strong>.</p>
+        <ol>
+            <li>Podrobnou dokumentaci naleznete na <a href="https://docs.mau.fi/bridges/go/whatsapp/index.html" target="_blank">oficiální dokumentaci</a>.</li>
+            <li>Zdrojový kód mostu WhatsApp je dostupný na <a href="https://github.com/mautrix/whatsapp" target="_blank">GitHubu</a>.</li>
+            <li>Pro podporu a další dotazy se připojte do <a href="https://matrix.to/#/%23whatsapp:maunium.net" target="_blank">Matrix místnosti pro podporu mostu WhatsApp</a>.</li>
+        </ol>
+
+
+         <h2>Používání</h2>
+        <ol>
+            <li>Začněte chatovat s <code>@whatsappbot:mxchat.cz</code>. Až se bot připojí, napište <code>help</code> v chatu, abyste zobrazili pokyny.</li>
+            <li>Pošlete příkaz <strong>login</strong> k mostnímu botovi.</li>
+            <li>Otevřete WhatsApp na svém telefonu.</li>
+            <li>Klepněte na <strong>Menu</strong> nebo <strong>Settings</strong> a vyberte <strong>WhatsApp Web</strong>.</li>
+            <li>Namiřte telefon na obrázek odeslaný robotem, abyste zachytili kód.</li>
+            <li>Nedávné chaty by nyní měly dostávat portály automaticky. Ostatní chaty získají portály, jakmile budete přijímat zprávy.</li>
+        </ol>
+        
+        <p>Vezměte prosím na vědomí, že most používá webové rozhraní API, takže váš telefon musí být připojen k internetu, aby most fungoval. Aplikace WhatsApp nemusí být spuštěna neustále, ale je třeba jí umožnit, aby se při příjmu zpráv probudila. Webové rozhraní API se používá místo hlavního klientského rozhraní API, aby nedošlo k zablokování.</p>
+
+        <h2>Potřebujete pomoc?</h2>
+        <p>Před vyhledáním pomoci si důkladně prostudujte dokumentaci. Pokud máte další dotazy, neváhejte kontaktovat <a href="mailto:podpora@mxchat.cz">podporu společnosti Bridge</a>.</p>
     </div>
     <footer class="site-footer">
         <p>Copyright &copy; Oscloud 2024</p>
     </footer>
 </body>
 </html>
+
 
