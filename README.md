@@ -20,7 +20,8 @@ Tato webová stránka slouží jako rozcestník pro všechny důležité odkazy 
 - **Projekty**: Seznam a popis projektů.
 - **Mosty (Bridges)**: Integrace s dalšími komunikačními platformami pomocí mostů.
 MXChat podporuje integraci s mnoha dalšími komunikačními platformami pomocí mostů (bridges).
-Tyto mosty umožňují komunikaci napříč různými platformami přímo z Matrixu. Zde je seznam podporovaných mostů:
+Tyto mosty umožňují komunikaci napříč různými platformami přímo z Matrixu.
+Zde je seznam podporovaných mostů:
 - Seznam podporovaných mostů bude doplněn.
 
 ## Jak Začít
@@ -40,4 +41,3 @@ Přivítáme všechny příspěvky! Pokud chcete přispět, prosím, otevřete i
 ## Licence
 
 Tento projekt je licencován pod licencí GNU General Public License v3.0 - podrobnosti naleznete v souboru [LICENSE](LICENSE).
-
