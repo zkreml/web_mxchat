@@ -22,7 +22,7 @@ Tato webová stránka slouží jako rozcestník pro všechny důležité odkazy 
 MXChat podporuje integraci s mnoha dalšími komunikačními platformami pomocí mostů (bridges).
 Tyto mosty umožňují komunikaci napříč různými platformami přímo z Matrixu.
 Zde je seznam podporovaných mostů:
-- Seznam podporovaných mostů bude doplněn.
+- Seznam podporovaných mostů bude brzo doplněn.
 
 ## Jak Začít
 
