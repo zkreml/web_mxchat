@@ -19,7 +19,8 @@ Tato webová stránka slouží jako rozcestník pro všechny důležité odkazy 
 - **Co je MXChat**: Informace o projektu MXChat a jeho hlavních funkcích.
 - **Projekty**: Seznam a popis projektů.
 - **Mosty (Bridges)**: Integrace s dalšími komunikačními platformami pomocí mostů.
-MXChat podporuje integraci s mnoha dalšími komunikačními platformami pomocí mostů (bridges).
+MXChat podporuje integraci s mnoha dalšími komunikačními platformami
+pomocí mostů (bridges).
 Tyto mosty umožňují komunikaci napříč různými platformami přímo z Matrixu.
 Zde je seznam podporovaných mostů:
 - Seznam podporovaných mostů bude brzo doplněn.
