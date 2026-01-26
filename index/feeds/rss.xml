@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Novinky na Mxchatu</title>
+    <link>https://web.mxchat.cz</link>
+    <description>Poslední novinky a aktualizace na Mxchatu</description>
+    <language>cs</language>
+
+    <item>
+      <title>Poslední aktualizace Matrix mostu</title>
+      <link>https://web.mxchat.cz/novinky/matrix-most.html</link>
+      <description>Matrix most byl právě aktualizován na verzi 2.3.0</description>
+      <pubDate>Mon, 05 Sep 2024 09:00:00 GMT</pubDate>
+    </item>
+
+    <item>
+      <title>Nová funkce: Miniflux integrace</title>
+      <link>https://web.mxchat.cz/novinky/miniflux-integrace.html</link>
+      <description>Integrovali jsme Miniflux do Mxchatu, což umožňuje pohodlnou správu RSS kanálů.</description>
+      <pubDate>Wed, 07 Sep 2024 12:00:00 GMT</pubDate>
+    </item>
+    
+  </channel>
+</rss>
