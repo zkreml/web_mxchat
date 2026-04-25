@@ -1,0 +1,611 @@
+/*
+  This file is part of <project name>.
+  Copyright (C) 2024 Oscloud
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program. If not, see <https://www.gnu.org/licenses/>.
+*/
+
+/* ============================================
+   IMPORTS - Inter font from Google Fonts
+   ============================================ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+/* ============================================
+   CSS PROMĚNNÉ - OSCloud paleta
+   ============================================ */
+:root {
+  /* Primární barvy - OSCloud modrá z loga */
+  --color-primary: #1565c0;
+  --color-primary-light: #1e88e5;
+  --color-primary-dark: #0d47a1;
+  --color-accent: #42a5f5;
+
+  /* Pozadí - tmavě modrá */
+  --color-bg: #0a1628;
+  --color-bg-gradient-start: #0a1628;
+  --color-bg-gradient-end: #142849;
+
+  /* Text */
+  --color-text: #e8f1ff;
+  --color-text-muted: #9fb3d1;
+  --color-text-dim: #6b7e9c;
+
+  /* Skla (glassmorphism) */
+  --glass-bg: rgba(30, 60, 110, 0.25);
+  --glass-bg-hover: rgba(30, 100, 180, 0.35);
+  --glass-border: rgba(120, 180, 255, 0.18);
+  --glass-border-hover: rgba(120, 180, 255, 0.4);
+  --glass-blur: 12px;
+
+  /* Stíny */
+  --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-glow: 0 0 30px rgba(21, 101, 192, 0.25);
+
+  /* Misc */
+  --transparent: transparent;
+  --radius: 0.75rem;
+  --radius-sm: 0.5rem;
+}
+
+/* ============================================
+   RESET A ZÁKLAD
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--color-text);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+
+  /* Tmavě modrý gradient pozadí */
+  background: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-end) 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
+
+  /* Subtilní decorativní záře v pozadí */
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(21, 101, 192, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(66, 165, 245, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  border: 0;
+  border-top: 1px solid var(--glass-border);
+  margin: 2rem 0;
+}
+
+/* ============================================
+   ODKAZY
+   ============================================ */
+a {
+  background-color: var(--transparent);
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+a:hover {
+  color: var(--color-primary-light);
+  text-decoration: underline;
+}
+
+/* ============================================
+   HLAVIČKA
+   ============================================ */
+.page-header {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 1.5rem 2rem 1.5rem;
+  text-align: center;
+}
+
+.project-name {
+  margin: 0.5rem 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  background: linear-gradient(135deg, #ffffff 0%, var(--color-accent) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media screen and (min-width: 64em) {
+  .project-name {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .project-name {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .project-name {
+    font-size: 2.25rem;
+  }
+}
+
+.project-tagline {
+  margin: 1rem auto 0 auto;
+  max-width: 60ch;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+@media screen and (max-width: 42em) {
+  .project-tagline {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+.project-description {
+  margin: 1rem auto;
+  max-width: 70ch;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.main-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+  font-family: "Inter", sans-serif;
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  word-wrap: break-word;
+}
+
+.main-content :first-child {
+  margin-top: 0;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main-content h2 {
+  font-size: 1.75rem;
+  color: var(--color-accent);
+}
+
+.main-content h3 {
+  font-size: 1.35rem;
+}
+
+.main-content p {
+  margin: 0 auto 1em auto;
+  max-width: 70ch;
+  text-align: left;
+  color: var(--color-text);
+}
+
+.main-content ul,
+.main-content ol {
+  max-width: 70ch;
+  margin: 0 auto 1em auto;
+  text-align: left;
+  color: var(--color-text);
+  padding-left: 1.5rem;
+}
+
+.main-content li {
+  margin-bottom: 0.4em;
+}
+
+.main-content code {
+  padding: 2px 6px;
+  font-family: "JetBrains Mono", "Fira Code", Consolas, monospace;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+  background-color: rgba(66, 165, 245, 0.12);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+}
+
+.main-content blockquote {
+  padding: 0.5rem 1.25rem;
+  margin: 1rem auto;
+  max-width: 70ch;
+  text-align: left;
+  color: var(--color-text-muted);
+  border-left: 3px solid var(--color-primary);
+  background: var(--glass-bg);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* ============================================
+   TLAČÍTKA - Glassmorphism
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  color: var(--color-text);
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.btn:hover {
+  color: #ffffff;
+  background-color: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  text-decoration: none;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn + .btn {
+  margin-left: 0.5rem;
+}
+
+/* Primary button (highlighted CTA) */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-color: var(--color-primary-light);
+  font-weight: 600;
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent) 100%);
+  border-color: var(--color-accent);
+  color: #ffffff;
+}
+
+/* Tlačítka mobil */
+@media screen and (max-width: 42em) {
+  .btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .btn + .btn {
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+}
+
+/* ============================================
+   NAV - skupina tlačítek
+   ============================================ */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 0.75rem 0;
+}
+
+@media screen and (max-width: 42em) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+}
+
+/* ============================================
+   SECTION TITLES (helpers pro landing)
+   ============================================ */
+.section-title {
+  text-align: center;
+  margin: 2rem 0 0.75rem 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  color: var(--color-text-dim);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+.site-footer p {
+  text-align: center;
+  margin: 0;
+}
+
+.site-footer a {
+  color: var(--color-accent);
+}
+
+/* ============================================
+   SPACER
+   ============================================ */
+.spacer {
+  height: 1.5rem;
+}
+
+/* ============================================
+   NEWS BLOCK (pro novinky)
+   ============================================ */
+.news-block {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.news-block:hover {
+  border-color: var(--glass-border-hover);
+  background-color: var(--glass-bg-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.news-block h2,
+.news-block h3 {
+  margin-top: 0;
+  color: var(--color-accent);
+}
+
+.news-date {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-accent);
+  background-color: rgba(66, 165, 245, 0.1);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.news-date:hover {
+  color: var(--color-text);
+  background-color: rgba(66, 165, 245, 0.2);
+  text-decoration: none;
+}
+
+.news-item {
+  margin-bottom: 1rem;
+}
+
+/* ============================================
+   FAQ (pro FAQ stránku)
+   ============================================ */
+.faq-item {
+  margin: 1rem auto;
+  padding: 1.25rem 1.5rem;
+  max-width: 70ch;
+  text-align: left;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(var(--glass-blur));
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+
+.faq-item h2 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  color: var(--color-accent);
+}
+
+/* ============================================
+   HOME ICON (v hlavičkách stránek)
+   ============================================ */
+.home-icon {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.home-icon:hover {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* ============================================
+   SCROLLBAR - hezčí pro Webkit
+   ============================================ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--glass-bg-hover);
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* ============================================
+   SUB / SUP
+   ============================================ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ============================================
+   MOBILNÍ ÚPRAVY
+   ============================================ */
+@media screen and (max-width: 42em) {
+  .page-header {
+    padding: 2rem 1rem 1.5rem 1rem;
+  }
+
+  .main-content {
+    padding: 0.5rem 1rem 1.5rem 1rem;
+  }
+
+  .home-icon {
+    top: 1rem;
+    right: 1rem;
+  }
+}

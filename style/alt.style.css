@@ -15,83 +15,236 @@
   You should have received a copy of the GNU General Public License
   along with this program. If not, see <https://www.gnu.org/licenses/>.
 */
+
+/* ============================================
+   IMPORTS
+   ============================================ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* ============================================
+   CSS PROMĚNNÉ
+   ============================================ */
 :root {
   --primary: #fff;
   --secondary: rgba(0, 0, 0, 0.5);
   --tertiary: #151b74;
+  --accent: #1565c0;
   --transparent: transparent;
 }
 
-/* Animations */
+/* ============================================
+   ANIMACE - pohyblivé tečky pozadí
+   ============================================ */
 @-webkit-keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
   }
 }
-
 @-moz-keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
   }
 }
-
 @-o-keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
   }
 }
-
 @keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
   }
 }
-
 @-webkit-keyframes bg-scrolling {
   0% {
     background-position: 50px 50px;
   }
 }
-
 @-moz-keyframes bg-scrolling {
   0% {
     background-position: 50px 50px;
   }
 }
-
 @-o-keyframes bg-scrolling {
   0% {
     background-position: 50px 50px;
   }
 }
-
 @keyframes bg-scrolling {
   0% {
     background-position: 50px 50px;
   }
 }
 
-/* Main styles */
+/* ============================================
+   ZÁKLAD
+   ============================================ */
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  margin-top: 13.5rem;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: var(--primary);
-  font-family: Utopia, "Liberation Serif";
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
   text-align: center;
   /* img size is 50x50 */
   background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAABbmlDQ1BpY2MAACiRdZE7SwNBFIW/RCWikRRaBLHYQsVCJSiIpcbCJkiICr6aZPMSNuuyu0HEVrCxCFiINr4K/4G2gq2CICiCiI1/wFcjYb2TBBJEZ5m9H2fmXGbOgD9m6AWnOQIF07UT01FtYXFJC7wSIEwnw/iSumNNxuMx/h1f9/hUvRtSvf7f9+doT2ccHXytwmO6ZbvCE8KxdddSvCPcpeeTaeEj4UFbDih8rfRUlV8U56r8odieS0yBX/XUcg2camA9bxeEB4R7C0ZRr51H3SSYMednpXbL7MEhwTRRNFIUWcXAZUiqKZn97YtUfDOsiUeXv8UGtjhy5MU7KGpRumakZkXPyGewoXL/naeTHR2pdg9GoeXZ8977ILAL5ZLnfR97XvkEmp7g0qz71ySn8U/RS3Wt9xBCW3B+VddSe3CxDeFHK2knK1KTTH82C29n0LEInbfQtlzNqrbO6QPMbcoT3cD+AfTL/tDKD92VZ/plHO89AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAuElEQVRoBe3awQ2CQABEUbUEbJEEi5ISpQVETuY38LPkk5gwp9mdx9H7srz2dX3fpul5G/XZts959H2e5/14G/Z3nv+QGPYC/+M/Rv2ceO4uwkXsnIgtwP5EuIidE7EF2J8IF7FzIrYA+xPhInZOxBZgfyJcxM6J2ALsT4SL2DkRW4D9iXAROydiC7A/ES5i50RsAfYnwkXsnIgtwP5EuIidE7EF2J8IF7FzIrYA+y8j8rvYJf6v9QVf2KG69fWg3gAAAABJRU5ErkJggg==")
     repeat 0 0;
   -webkit-animation: bg-scrolling-reverse 0.92s infinite;
-  /* Safari 4+ */
   -moz-animation: bg-scrolling-reverse 0.92s infinite;
-  /* Fx 5+ */
   -o-animation: bg-scrolling-reverse 0.92s infinite;
-  /* Opera 12+ */
   animation: bg-scrolling-reverse 0.92s infinite;
-  /* IE 10+ */
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
   -o-animation-timing-function: linear;
   animation-timing-function: linear;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden],
+template {
+  display: none;
+}
+
+img {
+  border: 0;
+  max-width: 100%;
+}
+
+/* ============================================
+   ODKAZY
+   ============================================ */
+a {
+  background-color: var(--transparent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   HLAVIČKA
+   ============================================ */
+.page-header {
+  position: relative;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+
+.project-name {
+  margin: 0.5rem 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+}
+
+@media screen and (min-width: 64em) {
+  .project-name {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .project-name {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .project-name {
+    font-size: 1.75rem;
+  }
+}
+
+.project-tagline {
+  max-width: 60ch;
+  margin: 0.5rem auto 1.5rem auto;
+  text-align: center;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  opacity: 0.85;
+}
+
+@media screen and (min-width: 64em) {
+  .project-tagline {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 42em) and (max-width: 64em) {
+  .project-tagline {
+    font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 42em) {
+  .project-tagline {
+    font-size: 1rem;
+  }
+}
+
+.project-description {
+  margin: 1rem auto;
+  max-width: 70ch;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--primary);
+  opacity: 0.85;
+}
+
+/* ============================================
+   MAIN CONTENT
+   ============================================ */
+.main-content {
+  flex: 1;
+  font-family: "Inter", sans-serif;
 }
 
 .larger-name {
@@ -102,63 +255,27 @@ body {
   font-size: smaller;
 }
 
-.main-content {
-  font-family: "Montserrat", sans-serif;
-}
-
-.project-name {
-  color: --primary;
-  font-family: Utopia, "Liberation Serif";
-}
-
 @media screen and (min-width: 64em) {
-  .project-name {
-    font-size: 8rem;
-  }
-
   .main-content {
     font-size: 1.5rem;
   }
 }
 
 @media screen and (min-width: 42em) and (max-width: 64em) {
-  .project-name {
-    font-size: 4rem;
-  }
-
   .main-content {
     font-size: 1.25rem;
   }
 }
 
 @media screen and (max-width: 42em) {
-  .project-name {
-    font-size: 2rem;
-  }
-
   .main-content {
     font-size: 1rem;
   }
 }
 
-a {
-  background-color: var(--transparent);
-}
-
-a:active,
-a:hover {
-  outline: 0;
-}
-
-a {
-  color: var(--tertiary);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
+/* ============================================
+   TLAČÍTKA
+   ============================================ */
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -168,14 +285,17 @@ a:hover {
   border-style: solid;
   border-width: 1px;
   border-radius: 0.3rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
 }
 
 .btn:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.95);
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .btn + .btn {
@@ -209,10 +329,9 @@ a:hover {
   }
 }
 
-* {
-  box-sizing: border-box;
-}
-
+/* ============================================
+   FORMULÁŘOVÉ PRVKY (reset)
+   ============================================ */
 button,
 input,
 optgroup,
@@ -251,6 +370,9 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
+/* ============================================
+   DROPDOWN
+   ============================================ */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -265,36 +387,18 @@ input::-moz-focus-inner {
   display: block;
 }
 
-.project-tagline {
-  margin-bottom: 2rem;
-  font-weight: normal;
-  opacity: 0.7;
-  font-family: "Montserrat", sans-serif;
-}
-
-@media screen and (min-width: 64em) {
-  .project-tagline {
-    font-size: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-  .project-tagline {
-    font-size: 1.15rem;
-  }
-}
-
-@media screen and (max-width: 42em) {
-  .project-tagline {
-    font-size: 1rem;
-  }
-}
-
-footer,
-site-footer {
-  font-family: "Montserrat", sans-serif;
-  font-size: small;
+/* ============================================
+   FOOTER
+   ============================================ */
+.site-footer {
+  font-family: "Inter", sans-serif;
+  font-size: 0.95rem;
   display: block;
+}
+
+.site-footer p {
+  text-align: center;
+  margin: 0;
 }
 
 @media screen and (min-width: 64em) {
@@ -315,6 +419,35 @@ site-footer {
   }
 }
 
+/* ============================================
+   SPACER
+   ============================================ */
+.spacer {
+  height: 1.5rem;
+}
+
+/* ============================================
+   NEWS BLOCK
+   ============================================ */
+.news-block {
+  margin: 0 auto 1.5rem auto;
+  padding: 1.25rem;
+  max-width: 70ch;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: left;
+}
+
+.news-block h2,
+.news-block h3 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+/* ============================================
+   SUB / SUP
+   ============================================ */
 sub,
 sup {
   font-size: 75%;
@@ -329,64 +462,4 @@ sup {
 
 sub {
   bottom: -0.25em;
-}
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.main-content {
-  flex: 1;
-}
-.site-footer p {
-  text-align: center;
-  margin: 0;
-}
-.site-footer p {
-    text-align: center;
-    margin: 0;
-}
-
-.project-description {
-    margin: 1rem auto;
-    max-width: 80%;
-    font-size: 1.1rem;
-    line-height: 1.5;
-    color: #606c71;
-}
-.project-tagline {
-    max-width: 60%;
-    margin: 0 auto;
-    text-align: center;
-    font-weight: normal;
-    opacity: 0.7;
-    font-family: "Montserrat", sans-serif;
-}
-
-@media screen and (min-width: 64em) {
-    .project-tagline {
-        font-size: 1.25rem;
-    }
-}
-
-@media screen and (min-width: 42em) and (max-width: 64em) {
-    .project-tagline {
-        font-size: 1.15rem;
-    }
-}
-
-@media screen and (max-width: 42em) {
-    .project-tagline {
-        font-size: 1rem;
-    }
-}
-.spacer {
-    height: 90px; /* Zde určíte výšku mezery */
 }

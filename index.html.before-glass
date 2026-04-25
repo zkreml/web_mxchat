@@ -37,77 +37,47 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
   <body>
     <header class="page-header" role="banner">
       <img src="./index/img/logo_oscloud.png" alt="OSCloud"
-        style="max-width: 110px; height: auto; display: block; margin: 0 auto;" />
+        style="max-width: 150px; height: auto; display: block; margin: 0 auto -0.5em auto;" />
       <h1 class="project-name">Mxchat CZ</h1>
-      <p class="project-tagline">
+      <h2 class="project-tagline">
         Komunitní šifrovaný chat postavený na protokolu Matrix.
-        Provozuje kolektiv <a href="https://oscloud.cz" target="_blank" rel="noopener"><strong>OSCloud</strong></a>.
-      </p>
+        Provozuje kolektiv OSCloud.
+      </h2>
     </header>
+
+    <div class="spacer"></div>
 
     <div class="main-content">
 
-      <p class="section-title">Začínáte?</p>
       <nav>
-        <a href="/index/registrace/registrace.html" class="btn btn-primary">
-          <i class="fa fa-user-plus"></i> Registrace
-        </a>
-        <a href="/index/navody/index.html" class="btn btn-primary">
-          <i class="fa fa-book"></i> Návody
-        </a>
-        <a href="/index/FAQ/FAQ.html" class="btn">
-          <i class="fa fa-question-circle"></i> FAQ
-        </a>
+        <a href="/index/registrace/registrace.html" class="btn">Registrace</a>
+        <a href="/index/navody/index.html" class="btn">Návody</a>
+        <a href="/index/FAQ/FAQ.html" class="btn">FAQ</a>
       </nav>
 
-      <p class="section-title">O projektu</p>
       <nav>
-        <a href="/index/about/index.html" class="btn">
-          <i class="fa fa-info-circle"></i> O Mxchat
-        </a>
-        <a href="/index/Bridges/index.html" class="btn">
-          <i class="fa fa-link"></i> Mosty
-        </a>
-        <a href="/index/news/news.html" class="btn">
-          <i class="fa fa-newspaper-o"></i> Novinky
-        </a>
-        <a href="/index/podpora/index.html" class="btn">
-          <i class="fa fa-heart"></i> Podpořit
-        </a>
+        <a href="/index/about/index.html" class="btn">O Mxchat</a>
+        <a href="/index/Bridges/index.html" class="btn">Mosty</a>
+        <a href="/index/news/news.html" class="btn">Novinky</a>
+        <a href="/index/podpora/index.html" class="btn">Podpořit</a>
       </nav>
 
-      <p class="section-title">Komunita</p>
       <nav>
-        <a href="/index/kontakty/index.html" class="btn">
-          <i class="fa fa-envelope"></i> Kontakty
-        </a>
-        <a href="https://matrix.to/#/#podpora:mxchat.cz" class="btn" target="_blank" rel="noopener">
-          <i class="fa fa-matrix-org"></i> #podpora:mxchat.cz
-        </a>
-        <a href="https://mamutovo.cz/@mxchatcz" class="btn" target="_blank" rel="noopener">
-          <i class="fa fa-mastodon"></i> Mastodon
-        </a>
+        <a href="/index/kontakty/index.html" class="btn">Kontakty</a>
+        <a href="https://matrix.to/#/#podpora:mxchat.cz" class="btn" target="_blank" rel="noopener">#podpora:mxchat.cz</a>
+        <a href="https://mamutovo.cz/@mxchatcz" class="btn" target="_blank" rel="noopener">Mastodon</a>
       </nav>
 
-      <p class="section-title">Právní informace</p>
       <nav>
-        <a href="/index/Pravidla/index.html" class="btn">
-          <i class="fa fa-list-ul"></i> Pravidla
-        </a>
-        <a href="/index/podminky/index.html" class="btn">
-          <i class="fa fa-file-text-o"></i> Podmínky služby
-        </a>
-        <a href="/index/privacy-policy/index.html" class="btn">
-          <i class="fa fa-shield"></i> Privacy Policy
-        </a>
+        <a href="/index/Pravidla/index.html" class="btn">Pravidla</a>
+        <a href="/index/podminky/index.html" class="btn">Podmínky služby</a>
+        <a href="/index/privacy-policy/index.html" class="btn">Privacy Policy</a>
       </nav>
 
     </div>
 
     <footer class="site-footer">
-      <p>
-        Copyright &copy; 2024-2026 Oscloud
-        &middot;
+      <p>Copyright &copy; 2024-2026 Oscloud
         <a href="https://git.arch-linux.cz/Oscloud/web-mxchat" target="_blank" rel="noopener">
           <i class="fa fa-gitea"></i> Gitea
         </a>
