@@ -22,7 +22,7 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zásady ochrany osobních údajů</title>
+    <title>Zásady ochrany osobních údajů - mxchat.cz</title>
     <link rel="stylesheet" href="../../style/style.css">
     <link rel="icon" type="image/x-icon" href="../../res/site/icons/favicon.ico">
     <link
@@ -38,64 +38,103 @@ along with this program. If not, see <https://www.gnu.org/licenses/>.
         </a>
     </header>
     <div class="main-content">
+        <p><em>Poslední aktualizace: 25. dubna 2026</em></p>
+
         <h2>Úvod</h2>
-        <p>Vaše soukromí je pro nás důležité. Proto s nimi nejen zacházíme mimořádně důvěrně, ale bereme také vaše právo k informacím velmi vážně. Stanoví to obecné nařízení EU o ochraně osobních údajů (GDPR). Tyto zásady ochrany osobních údajů vysvětlují, jak shromažďujeme, používáme a chráníme vaše osobní údaje.</p>
+        <p>Mxchat.cz je komunitní Matrix server provozovaný kolektivem OSCloud. Vaše soukromí bereme vážně a tyto zásady popisují, jaká data o vás zpracováváme, proč a jak dlouho. Dokument je v souladu s GDPR (nařízení EU 2016/679).</p>
 
-        <h2>Přispějte k tomuto dokumentu</h2>
-        <p>Uživatelé jsou vždy více než vítáni, aby přispěli k těmto stránkám. Prosím, kontaktujte nás v komunitní místnosti mxchat.cz nebo přes.</p>
+        <h2>Provozovatel</h2>
+        <p>Mxchat.cz provozuje <strong>kolektiv OSCloud</strong> — dobrovolnické sdružení, jehož cílem je nabízet bezpečné a privacy-friendly alternativy ke komerčním službám. Spolek je v přípravě k registraci. Kontakt na provozovatele: <a href="mailto:podpora@oscloud.cz">podpora@oscloud.cz</a>.</p>
 
-        <h2>1. Umístění mxchat.cz a jeho oprávněného personálu</h2>
-        <p>mxchat.cz používá servery v Německu k poskytování svých služeb. Pro nahrávání médií v rámci služby Matrix se používá datové centrum v Německu.</p>
+        <h2>Kde běží naše servery</h2>
+        <p>Servery mxchat.cz jsou hostované v datovém centru v Německu (Hetzner Online GmbH). Veškerá data tedy zůstávají v rámci Evropské unie a podléhají evropské legislativě.</p>
 
-        <h2>2. Služby třetích stran</h2>
-        <p>Můžete používat klienta, který využívá služby, které nejsou hostovány mxchat.cz, jako například:</p>
+        <h2>Jaká data zpracováváme</h2>
+
+        <h3>Při vytvoření účtu</h3>
         <ul>
-            <li>Jitsi video webové konference, z funkce videohovoru nebo z integračního manažera (obvykle riot.im, nyní známý jako Element)</li>
-            <li>Samotný integrační manažer (obvykle hostovaný Matrix.org), který poskytuje widgety a boty pro místnosti, které obvykle mohou přistupovat k vašim zprávám a souborům v místnosti, pokud jsou aktivovány.</li>
-            <li>Identitní server (Matrix.org)</li>
-            <li>Klíčový server (Matrix.org)</li>
+            <li><strong>Uživatelské jméno</strong> (matrix ID, např. @vase_jmeno:mxchat.cz) — veřejně viditelné</li>
+            <li><strong>E-mailová adresa</strong> — pro reset hesla a notifikace; není povinná, ale doporučená</li>
+            <li><strong>Heslo</strong> — uloženo v hashované podobě, nikdo (ani admin) ho nemůže přečíst</li>
         </ul>
 
-        <h2>3. Federace</h2>
-        <p>Můžete se účastnit místností a prostorů jiných serverů (podobně jako komunikace s různými poskytovateli e-mailu) nebo v místních místnostech a prostorech s uživateli z jiných serverů. Mxchat.cz nemůže garantovaně kontrolovat, jak tito poskytovatelé mohou nakládat se zprávami a nahranými soubory, které poskytujete přes federaci.</p>
-
-        <h2>4. Data, která shromažďujeme</h2>
-        <p>Webový server i Matrix homeserver shromažďují data pro účely moderace a logování/debugování. Tato data zahrnují:</p>
+        <h3>Při používání služby</h3>
         <ul>
-            <li>Vaši IP adresu</li>
-            <li>Vaši http-referrer (stránku, odkud přicházíte)</li>
-            <li>Vámi používaný software, jako je klient/prohlížeč/zařízení</li>
-            <li>Kdy jste byli naposledy aktivní</li>
+            <li><strong>IP adresa</strong> — uchováváme 7 dní pro účely moderace a ladění problémů</li>
+            <li><strong>"Naposledy viděn"</strong> (last seen) — informace, kdy jste byli naposledy aktivní; uchováváme 7 dní</li>
+            <li><strong>Klient/zařízení</strong> — User-Agent řetězec prohlížeče nebo aplikace</li>
+            <li><strong>Zprávy a média</strong> — uchováváme maximálně 1 rok, poté jsou automaticky mazány</li>
         </ul>
 
-        <h2>5. Mosty (Bridging)</h2>
-        <p>Některé místnosti používají mosty k připojení k sítím mimo Matrix, jako je IRC, Discord nebo Telegram. Když místnost používá takového bota nebo aplikační službu, zprávy a média jsou kopírovány do připojených sítí. tchncs.cz není odpovědné ani schopné garantovat kontrolu nad daty sdílenými s těmito platformami.</p>
-
-        <h2>6. Doba uchování dat</h2>
-        <p>Většina dat, která poskytujete, na tomto homeserveru vyprší:</p>
+        <h3>Logy</h3>
         <ul>
-            <li>Zprávy a nahrávky: 1 rok</li>
-            <li>Logy webového serveru: 7 dní</li>
-            <li>Logy Synapse: 4 dny</li>
-            <li>IP adresa zaznamenaná Matrix homeserverem: 7 dní</li>
-            <li>Poslední doba, kdy jste byli viděni: 7 dní</li>
+            <li><strong>Web server</strong> — 7 dní (ladění a bezpečnost)</li>
+            <li><strong>Synapse (Matrix server)</strong> — 4 dny (ladění a bezpečnost)</li>
         </ul>
 
-        <h2>7. Zpracování dat</h2>
-        <p>Shromážděná data naším webovým serverem (při používání webového klienta Element na mxchat.cz nebo při přístupu k Matrix homeserveru mxchat.cz), jako je vaše IP adresa, mohou být použita v případě odstraňování problémů nebo pro účely moderace.</p>
+        <h3>Šifrované zprávy</h3>
+        <p>Zprávy ve šifrovaných místnostech (E2EE) jsou na našich serverech uloženy v zašifrované podobě. <strong>Nemáme klíče k jejich rozšifrování</strong> — k tomu má přístup pouze vy a vaši konverzační partneři. Ani správci serveru nemají přístup k obsahu šifrovaných zpráv.</p>
 
-        <h2>8. Smazání dat</h2>
-        <p>Pokud si přejete, můžete pomocí svého klienta smazat svůj účet zcela z našeho serveru. Tato akce je v souladu s GDPR a nelze ji vrátit zpět. V takovém případě zůstane pouze vaše uživatelské jméno, aby se zabránilo podvodům a chybám s federací.</p>
-        <p>Pokud se rozhodnete redigovat zprávu, uživatelé na našem serveru nebudou schopni číst její obsah. Nemůžeme však zaručit, že tento požadavek bude splněn vzdálenými servery a službami.</p>
+        <h2>Analytika webu</h2>
+        <p>Na webové stránce <strong>web.mxchat.cz</strong> používáme <a href="https://umami.is/" target="_blank">Umami</a> — privacy-friendly analytický nástroj. Umami:</p>
+        <ul>
+            <li>Nepoužívá cookies</li>
+            <li>Neuchovává osobně identifikovatelné údaje</li>
+            <li>Sleduje pouze anonymizované statistiky návštěvnosti (počet návštěv, referer, prohlížeč)</li>
+            <li>Je hostován na našich vlastních serverech (OSCloud) — data neopouští EU</li>
+        </ul>
+        <p>Žádné jiné analytické nástroje (Google Analytics, Matomo, Plausible apod.) nepoužíváme.</p>
 
-        <h2>9. Export dat</h2>
-        <p>Můžete požádat o přístup k osobním údajům uloženým na našich serverech nebo je opravit. V závislosti na vašem použití klienta můžete být schopni exportovat potřebné informace, jako je historie chatu, bez nutnosti kontaktovat nás.</p>
+        <h2>Federace</h2>
+        <p>Matrix je federovaná síť — můžete komunikovat s uživateli na jiných serverech. Pokud napíšete někomu na cizím serveru:</p>
+        <ul>
+            <li>Vaše zprávy a média se kopírují na server příjemce</li>
+            <li>Provozovatel cizího serveru se řídí svými vlastními pravidly a zásadami</li>
+            <li>Mxchat.cz nemá kontrolu nad daty, která se federují na cizí servery</li>
+        </ul>
+        <p>Tomu se vyhnete tak, že budete komunikovat pouze s uživateli mxchat.cz, nebo zvolíte server podle vašich preferencí.</p>
 
-        <h2>10. Cookies</h2>
-        <p>Třetí strany zmíněné výše (a níže) mohou umístit cookies potřebné k poskytování jejich funkcí nebo více. V případě webového klienta můžete tyto cookies ovládat pomocí nastavení vašeho prohlížeče. Jinak prosím mějte na paměti zásady ochrany osobních údajů a/nebo zásady cookies aplikace, kterou používáte s naší službou.</p>
+        <h2>Mosty (Bridges)</h2>
+        <p>Mxchat.cz provozuje mosty do dalších komunikačních platforem, které vám umožňují komunikovat s lidmi mimo Matrix. Pokud most aktivujete, vaše zprávy jsou kopírovány do připojené sítě a podléhají zásadám ochrany osobních údajů této platformy.</p>
+        <p>Provozované mosty:</p>
+        <ul>
+            <li>WhatsApp</li>
+            <li>Telegram</li>
+            <li>Signal</li>
+            <li>Meta Messenger (Facebook)</li>
+            <li>Discord</li>
+            <li>Google Messages</li>
+        </ul>
+        <p>Mxchat.cz nemůže zaručit, jak připojené platformy nakládají s vašimi daty. Pokud používáte mosty, doporučujeme prostudovat jejich vlastní zásady ochrany osobních údajů.</p>
 
-        <h2>11. Změny tohoto dokumentu</h2>
-        <p>Tento dokument může být čas od času aktualizován. V takovém případě homeserver upozorní své uživatele. Aby mohli službu nadále používat, musí si přečíst a souhlasit s novou verzí tohoto dokumentu.</p>
+        <h2>Třetí strany v Element klientovi</h2>
+        <p>Webový klient Element (chat.mxchat.cz) ve výchozím nastavení komunikuje s několika službami třetích stran:</p>
+        <ul>
+            <li><strong>vector.im</strong> — identity server (vyhledávání kontaktů přes e-mail/telefon, pokud tuto funkci použijete)</li>
+            <li><strong>scalar.vector.im</strong> — integration manager (widgety a boti v místnostech)</li>
+            <li><strong>element.io</strong> — odesílání bug reportů (jen pokud je explicitně odešlete)</li>
+            <li><strong>meet.jit.si</strong> — Jitsi videokonference (jen pokud spustíte hovor)</li>
+        </ul>
+        <p>Tyto služby provozuje Element / New Vector Ltd., respektive Jitsi Foundation. Plánujeme postupně tyto závislosti omezovat nebo nahrazovat vlastními instancemi.</p>
+
+        <h2>Cookies</h2>
+        <p>Web mxchat.cz a web.mxchat.cz <strong>nepoužívají žádné cookies</strong>. Element klient (chat.mxchat.cz) používá lokální úložiště prohlížeče (localStorage, IndexedDB) k ukládání šifrovacích klíčů a stavu aplikace — tyto údaje neopouští váš prohlížeč.</p>
+
+        <h2>Vaše práva podle GDPR</h2>
+        <p>Jako uživatel mxchat.cz máte právo:</p>
+        <ul>
+            <li><strong>Přistupovat ke svým údajům</strong> — můžete si v Elementu exportovat historii vašich konverzací</li>
+            <li><strong>Smazat svůj účet</strong> — kdykoliv pomocí klienta nebo žádostí na <a href="mailto:podpora@oscloud.cz">podpora@oscloud.cz</a>. Po smazání zůstane pouze vaše uživatelské jméno (kvůli prevenci podvodů a chyb federace), ale obsah bude vymazán</li>
+            <li><strong>Opravit nesprávné údaje</strong> — kontaktujte nás</li>
+            <li><strong>Redigovat zprávy</strong> — pomocí klienta. Na našem serveru bude obsah skryt, ale federace nemůže být plně garantována (cizí servery se mohou rozhodnout zprávy zachovat)</li>
+            <li><strong>Podat stížnost</strong> u Úřadu pro ochranu osobních údajů (<a href="https://www.uoou.cz/" target="_blank">uoou.cz</a>)</li>
+        </ul>
+
+        <h2>Změny tohoto dokumentu</h2>
+        <p>Tyto zásady mohou být v budoucnu aktualizovány (např. při přidání nové funkcionality, změně retention period, registraci spolku). O změnách budeme informovat v komunitní místnosti <a href="https://matrix.to/#/#podpora:mxchat.cz">#podpora:mxchat.cz</a> a aktualizujeme datum v záhlaví tohoto dokumentu.</p>
+
+        <h2>Kontakt</h2>
+        <p>Otázky ohledně ochrany osobních údajů, žádosti podle GDPR nebo nahlášení problémů: <a href="mailto:podpora@oscloud.cz">podpora@oscloud.cz</a>.</p>
     </div>
     <footer class="site-footer">
         <p style="text-align:center;">Copyright &copy; 2024-2026 Oscloud</p>
