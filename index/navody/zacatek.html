@@ -1,0 +1,151 @@
+<!--
+This file is part of <project name>.
+
+Copyright (C) 2024 Oscloud
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Začínáme s Mxchat — registrace a nastavení šifrování</title>
+    <meta name="description" content="Krok za krokem návod jak si vytvořit účet na mxchat.cz, přihlásit se do Element klientu a nastavit šifrování (zálohu klíčů)." />
+    <link rel="stylesheet" href="../../style/style.css" />
+    <link rel="icon" type="image/x-icon" href="../../res/site/icons/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+</head>
+<body>
+    <header class="page-header" role="banner">
+        <h1 class="project-name">Začínáme s Mxchat</h1>
+        <a href="/index.html" class="home-icon" title="Domů">
+            <i class="fas fa-home"></i>
+        </a>
+    </header>
+    <div class="main-content">
+
+        <p><em>Tento návod vás provede registrací nového účtu na mxchat.cz, prvním přihlášením do <a href="https://chat.mxchat.cz" target="_blank" rel="noopener">Element webu</a> a nastavením šifrování (zálohy klíčů). Trvá zhruba 5-10 minut.</em></p>
+
+        <p>
+            <a href="/index/navody/index.html">&larr; Zpět na návody</a>
+        </p>
+
+        <h2>Než začnete</h2>
+        <p>Pro registraci budete potřebovat:</p>
+        <ul>
+            <li><strong>Registrační token</strong> — vyžádejte si ho na <a href="mailto:podpora@oscloud.cz">podpora@oscloud.cz</a> nebo přes naši kontaktní stránku. Bez tokenu se nemůžete zaregistrovat.</li>
+            <li><strong>E-mail</strong> — pro reset hesla a notifikace (volitelný, ale doporučený).</li>
+            <li><strong>Bezpečné místo</strong> pro uložení obnovovacího klíče (správce hesel, šifrovaná poznámka, papírek v trezoru).</li>
+        </ul>
+
+        <p><strong>Existující uživatelé OSCloud</strong> token nepotřebují — můžete se přihlásit pomocí svého OSCloud účtu (SSO).</p>
+
+        <hr>
+
+        <h2>1. Otevřete Element web</h2>
+        <p>Přejděte na <a href="https://chat.mxchat.cz" target="_blank" rel="noopener">https://chat.mxchat.cz</a>. Uvidíte uvítací obrazovku Element klientu:</p>
+        <p><img src="img/zacatek-1-vita-element.png" alt="Uvítací obrazovka Element webu na chat.mxchat.cz" style="max-width: 100%; border: 1px solid #ccc; border-radius: 0.3rem;" /></p>
+        <p>Klikněte na <strong>Vytvořit účet</strong>.</p>
+
+        <h2>2. Vyberte způsob přihlášení</h2>
+        <p>Zobrazí se formulář pro vytvoření účtu. Domovský server je již nastaven na <code>mxchat.cz</code>.</p>
+        <p><img src="img/zacatek-2-vytvorit-ucet.png" alt="Formulář pro vytvoření účtu na mxchat.cz" style="max-width: 100%; border: 1px solid #ccc; border-radius: 0.3rem;" /></p>
+        <p>Máte dvě možnosti:</p>
+        <ul>
+            <li><strong>Pokračovat s Oscloud Login</strong> — pokud již máte účet v OSCloud (Nextcloud, Pixelfed atd.), můžete se přihlásit pomocí SSO bez tokenu.</li>
+            <li><strong>Registrace s tokenem</strong> — vyplňte uživatelské jméno a heslo a klikněte <strong>Zaregistrovat</strong>.</li>
+        </ul>
+
+        <h2>3. Vyplňte údaje</h2>
+        <p>Pokud zvolíte registraci s tokenem, vyplňte:</p>
+        <ul>
+            <li><strong>Uživatelské jméno</strong> — bude součástí vašeho Matrix ID (např. <code>@vase_jmeno:mxchat.cz</code>). Použijte malá písmena, čísla a podtržítka.</li>
+            <li><strong>Heslo</strong> — silné heslo (minimálně 8 znaků, doporučujeme správce hesel).</li>
+            <li><strong>Potvrďte heslo</strong>.</li>
+        </ul>
+        <p><img src="img/zacatek-3-vytvorit-ucet-vyplneno.png" alt="Vyplněný registrační formulář" style="max-width: 100%; border: 1px solid #ccc; border-radius: 0.3rem;" /></p>
+        <p>Klikněte na <strong>Zaregistrovat</strong>.</p>
+
+        <h2>4. Zadejte registrační token</h2>
+        <p>Element vás požádá o <strong>registrační token</strong>, který jste obdrželi e-mailem od podpory.</p>
+        <p><img src="img/zacatek-4-registrace-token.png" alt="Pole pro zadání registračního tokenu" style="max-width: 100%; border: 1px solid #ccc; border-radius: 0.3rem;" /></p>
+        <p>Vložte token a klikněte <strong>Pokračovat</strong>. Dokončíte registraci a Element vás přihlásí.</p>
+
+        <h2>5. Po přihlášení</h2>
+        <p>Po úspěšném přihlášení uvidíte úvodní obrazovku Elementu:</p>
+        <p><img src="img/zacatek-5-vitejte-tester.png" alt="Úvodní obrazovka Element webu po přihlášení" style="max-width: 100%; border: 1px solid #ccc; border-radius: 0.3rem;" /></p>
+        <p>Klikněte na svou avatar ikonu vlevo nahoře a vyberte <strong>Zabezpečení a soukromí</strong>.</p>
+
+        <hr>
+
+        <h2>Nastavení šifrování (důležité!)</h2>
+
+        <p><strong>⚠️ Pozor:</strong> Mxchat.cz používá end-to-end šifrování. Pokud nemáte zálohu šifrovacích klíčů a ztratíte zařízení nebo se odhlásíte, <strong>přijdete o přístup ke staré historii zpráv</strong>. Doporučujeme proto na začátku nastavit obnovovací klíč.</p>
+
+        <h2>6. Otevřete Zabezpečení a soukromí</h2>
+        <p>V nabídce Nastavení klikněte na <strong>Zabezpečení a soukromí</strong>.</p>
+        <p><img src="img/zacatek-6-zabezpeceni-soukromi.png" alt="Nastavení Zabezpečení a soukromí" style="max-width: 100%; border: 1px solid #ccc; border-radius: 0.3rem;" /></p>
+        <p>V levém menu klikněte na <strong>Šifrování</strong>.</p>
+
+        <h2>7. Povolte úložiště klíčů</h2>
+        <p>V sekci Šifrování zapněte přepínač <strong>Povolit úložiště klíčů</strong>.</p>
+        <p><img src="img/zacatek-7-sifrovani.png" alt="Sekce Šifrování s povoleným úložištěm klíčů" style="max-width: 100%; border: 1px solid #ccc; border-radius: 0.3rem;" /></p>
+        <p>V sekci <strong>Obnovení</strong> klikněte na <strong>Nastavení obnovy</strong>.</p>
+
+        <h2>8. Vytvořte obnovovací klíč</h2>
+        <p>Element zobrazí dialog pro vytvoření obnovovacího klíče.</p>
+        <p><img src="img/zacatek-8-nastaveni-obnovy.png" alt="Dialog Nastavení obnovy" style="max-width: 100%; border: 1px solid #ccc; border-radius: 0.3rem;" /></p>
+        <p>Klikněte <strong>Pokračovat</strong>. Element vygeneruje 12 slov, která tvoří váš obnovovací klíč.</p>
+
+        <h2>9. Uložte obnovovací klíč</h2>
+        <p>Element vám zobrazí 12 slov, která jsou vaším obnovovacím klíčem:</p>
+        <p><img src="img/zacatek-9-klic-obnoveni.png" alt="Obnovovací klíč - 12 slov" style="max-width: 100%; border: 1px solid #ccc; border-radius: 0.3rem;" /></p>
+        <p><strong>Uložte si těchto 12 slov na bezpečné místo:</strong></p>
+        <ul>
+            <li>Správce hesel (Bitwarden, KeePassXC apod.)</li>
+            <li>Šifrovaná poznámka</li>
+            <li>Papírek uložený v trezoru</li>
+        </ul>
+        <p><strong>Nesdílejte tento klíč s nikým!</strong> Slouží jen vám pro obnovení přístupu k šifrovaným zprávám.</p>
+        <p>Klikněte <strong>Pokračovat</strong>. Šifrování je nyní nastaveno.</p>
+
+        <hr>
+
+        <h2>Hotovo! 🎉</h2>
+        <p>Máte vytvořený účet na mxchat.cz s nastaveným šifrováním. Co dál?</p>
+        <ul>
+            <li><strong>Připojte si další zařízení</strong> — telefon, desktop. Při přidávání nového zařízení použijete obnovovací klíč nebo verifikaci.</li>
+            <li><strong>Najděte si místnosti</strong> — klikněte na <strong>Prozkoumat veřejné místnosti</strong> nebo se připojte do <a href="https://matrix.to/#/#podpora:mxchat.cz">#podpora:mxchat.cz</a> pro pomoc.</li>
+            <li><strong>Pošlete přímou zprávu</strong> — najděte uživatele přes <strong>+</strong> u People a zadejte jeho Matrix ID.</li>
+            <li><strong>Propojte si externí chaty</strong> — viz <a href="/index/Bridges/index.html">návody pro mosty</a> (WhatsApp, Telegram, Signal a další).</li>
+        </ul>
+
+        <h2>Něco nefunguje?</h2>
+        <ul>
+            <li>Napište nám e-mail: <a href="mailto:podpora@oscloud.cz">podpora@oscloud.cz</a></li>
+            <li>Připojte se do <a href="https://matrix.to/#/#podpora:mxchat.cz">#podpora:mxchat.cz</a> a zeptejte se</li>
+            <li>Mrkněte do <a href="/index/FAQ/FAQ.html">FAQ</a></li>
+        </ul>
+
+    </div>
+    <footer class="site-footer">
+        <p>Copyright &copy; 2024-2026 Oscloud</p>
+    </footer>
+</body>
+</html>
