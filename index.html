@@ -1,117 +1,134 @@
-<!--
-This file is part of <project name>.
-
-Copyright (C) 2024 Oscloud
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program. If not, see <https://www.gnu.org/licenses/>.
--->
 <!DOCTYPE html>
-<html lang="cs">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mxchat CZ — komunitní šifrovaný chat</title>
-    <meta name="description" content="Mxchat.cz je komunitní šifrovaný chat postavený na protokolu Matrix. Provozuje OSCloud kolektiv." />
-    <script defer src="https://analytics.oscloud.cz/script.js" data-website-id="d11917fd-7d35-485d-b288-d71eaf85a56d"></script>
-    <link rel="stylesheet" type="text/css" href="./style/alt.style.css" />
-    <link rel="icon" type="image/x-icon" href="./res/site/icons/favicon.ico" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css"
-      integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY="
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <header class="page-header" role="banner">
-      <img src="./index/img/logo_oscloud.png" alt="OSCloud"
-        style="max-width: 110px; height: auto; display: block; margin: 0 auto;" />
-      <h1 class="project-name">Mxchat CZ</h1>
-      <p class="project-tagline">
-        Komunitní šifrovaný chat postavený na protokolu Matrix.
-        Provozuje kolektiv <a href="https://oscloud.cz" target="_blank" rel="noopener"><strong>OSCloud</strong></a>.
-      </p>
-    </header>
+<html lang="cs" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mxchat CZ — komunitní šifrovaný chat</title>
+  <meta name="description" content="Mxchat.cz je komunitní šifrovaný chat postavený na protokolu Matrix. Provozuje OSCloud kolektiv." />
+  <script defer src="https://analytics.oscloud.cz/script.js" data-website-id="d11917fd-7d35-485d-b288-d71eaf85a56d"></script>
+  <link rel="stylesheet" href="./style/mxchat.css" />
+  <link rel="icon" type="image/x-icon" href="./res/site/icons/favicon.ico" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous" />
+</head>
+<body>
 
-    <div class="main-content">
-
-      <p class="section-title">Začínáte?</p>
-      <nav>
-        <a href="/index/registrace/registrace.html" class="btn btn-primary">
-          <i class="fa fa-user-plus"></i> Registrace
-        </a>
-        <a href="/index/navody/index.html" class="btn btn-primary">
-          <i class="fa fa-book"></i> Návody
-        </a>
-        <a href="/index/FAQ/FAQ.html" class="btn">
-          <i class="fa fa-question-circle"></i> FAQ
-        </a>
-      </nav>
-
-      <p class="section-title">O projektu</p>
-      <nav>
-        <a href="/index/about/index.html" class="btn">
-          <i class="fa fa-info-circle"></i> O Mxchat
-        </a>
-        <a href="/index/Bridges/index.html" class="btn">
-          <i class="fa fa-link"></i> Mosty
-        </a>
-        <a href="/index/news/news.html" class="btn">
-          <i class="fa fa-newspaper-o"></i> Novinky
-        </a>
-        <a href="/index/podpora/index.html" class="btn">
-          <i class="fa fa-heart"></i> Podpořit
-        </a>
-      </nav>
-
-      <p class="section-title">Komunita</p>
-      <nav>
-        <a href="/index/kontakty/index.html" class="btn">
-          <i class="fa fa-envelope"></i> Kontakty
-        </a>
-        <a href="https://matrix.to/#/#podpora:mxchat.cz" class="btn" target="_blank" rel="noopener">
-          <i class="fa fa-matrix-org"></i> #podpora:mxchat.cz
-        </a>
-        <a href="https://mamutovo.cz/@oscloud" class="btn" target="_blank" rel="noopener">
-          <i class="fa fa-mastodon"></i> Mastodon
-        </a>
-      </nav>
-
-      <p class="section-title">Právní informace</p>
-      <nav>
-        <a href="/index/Pravidla/index.html" class="btn">
-          <i class="fa fa-list-ul"></i> Pravidla
-        </a>
-        <a href="/index/podminky/index.html" class="btn">
-          <i class="fa fa-file-text-o"></i> Podmínky služby
-        </a>
-        <a href="/index/privacy-policy/index.html" class="btn">
-          <i class="fa fa-shield"></i> Privacy Policy
-        </a>
-      </nav>
-
+  <nav class="site-nav">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-icon">M</div>
+      <span class="nav-logo-text">mxchat.cz</span>
+    </a>
+    <button class="nav-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+    <div class="nav-links">
+      <a href="/index/navody/index.html" class="nav-link">Návody</a>
+      <a href="/index/Bridges/index.html" class="nav-link">Mosty</a>
+      <a href="/index/news/news.html" class="nav-link">Novinky</a>
+      <a href="/index/FAQ/FAQ.html" class="nav-link">FAQ</a>
+      <a href="/index/registrace/registrace.html" class="nav-cta">Registrace</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Přepnout téma"></button>
     </div>
+  </nav>
 
-    <footer class="site-footer">
-      <p>
-        Copyright &copy; 2024-2026 Oscloud
-        &middot;
-        <a href="https://git.arch-linux.cz/Oscloud/web-mxchat" target="_blank" rel="noopener">
-          <i class="fa fa-gitea"></i> Gitea
-        </a>
-      </p>
-    </footer>
-  </body>
+  <section class="hero">
+    <div class="hero-badge">Open source · End-to-end encrypted</div>
+    <h1>Komunitní šifrovaný chat postavený na Matrixu</h1>
+    <p>Provozuje kolektiv <a href="https://oscloud.cz" target="_blank" rel="noopener">OSCloud</a>. Bezpečná komunikace s mosty do WhatsApp, Telegram, Signal a dalších.</p>
+    <div class="hero-actions">
+      <a href="/index/registrace/registrace.html" class="btn-primary">Začít chatovat</a>
+      <a href="/index/navody/index.html" class="btn-secondary">Návody</a>
+    </div>
+  </section>
+
+  <div class="card-grid">
+    <a href="/index/about/index.html" class="link-card">
+      <div>
+        <div class="link-card-title"><i class="fa fa-info-circle"></i> O Mxchat</div>
+        <div class="link-card-desc">Co je mxchat.cz a proč existuje</div>
+      </div>
+      <span class="link-card-arrow">&rarr;</span>
+    </a>
+    <a href="/index/Bridges/index.html" class="link-card">
+      <div>
+        <div class="link-card-title"><i class="fa fa-link"></i> Mosty (Bridges)</div>
+        <div class="link-card-desc">WhatsApp, Telegram, Signal a další</div>
+      </div>
+      <span class="link-card-arrow">&rarr;</span>
+    </a>
+    <a href="/index/Pravidla/index.html" class="link-card">
+      <div>
+        <div class="link-card-title"><i class="fa fa-list-ul"></i> Pravidla</div>
+        <div class="link-card-desc">Komunitní pravidla serveru</div>
+      </div>
+      <span class="link-card-arrow">&rarr;</span>
+    </a>
+    <a href="/index/podminky/index.html" class="link-card">
+      <div>
+        <div class="link-card-title"><i class="fa fa-file-text-o"></i> Podmínky služby</div>
+        <div class="link-card-desc">Právní podmínky používání</div>
+      </div>
+      <span class="link-card-arrow">&rarr;</span>
+    </a>
+    <a href="/index/privacy-policy/index.html" class="link-card">
+      <div>
+        <div class="link-card-title"><i class="fa fa-shield"></i> Privacy Policy</div>
+        <div class="link-card-desc">Zásady ochrany osobních údajů</div>
+      </div>
+      <span class="link-card-arrow">&rarr;</span>
+    </a>
+    <a href="/index/kontakty/index.html" class="link-card">
+      <div>
+        <div class="link-card-title"><i class="fa fa-envelope"></i> Kontakty</div>
+        <div class="link-card-desc">podpora@oscloud.cz</div>
+      </div>
+      <span class="link-card-arrow">&rarr;</span>
+    </a>
+    <a href="/index/podpora/index.html" class="link-card">
+      <div>
+        <div class="link-card-title"><i class="fa fa-heart"></i> Podpořit</div>
+        <div class="link-card-desc">Jak podpořit projekt</div>
+      </div>
+      <span class="link-card-arrow">&rarr;</span>
+    </a>
+    <a href="https://mamutovo.cz/@oscloud" class="link-card" target="_blank" rel="noopener">
+      <div>
+        <div class="link-card-title"><i class="fa fa-mastodon"></i> Mastodon</div>
+        <div class="link-card-desc">@oscloud@mamutovo.cz</div>
+      </div>
+      <span class="link-card-arrow">&rarr;</span>
+    </a>
+  </div>
+
+  <footer class="site-footer">
+    <span>&copy; 2024-2026 OSCloud</span>
+    <div class="footer-links">
+      <a href="https://mamutovo.cz/@oscloud" target="_blank" rel="noopener"><i class="fa fa-mastodon"></i> Mastodon</a>
+      <a href="https://matrix.to/#/#podpora:mxchat.cz" target="_blank" rel="noopener"><i class="fa fa-matrix-org"></i> Matrix</a>
+      <a href="https://git.arch-linux.cz/Oscloud/web-mxchat" target="_blank" rel="noopener"><i class="fa fa-gitea"></i> Gitea</a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      var html = document.documentElement;
+      var current = html.getAttribute("data-theme");
+      var next = current === "dark" ? "light" : "dark";
+      html.setAttribute("data-theme", next);
+      localStorage.setItem("mxchat-theme", next);
+      updateToggleIcon(next);
+    }
+    function updateToggleIcon(theme) {
+      var btn = document.querySelector(".theme-toggle");
+      if (btn) btn.textContent = theme === "dark" ? "\u2600" : "\uD83C\uDF19";
+    }
+    (function() {
+      var saved = localStorage.getItem("mxchat-theme");
+      if (saved) {
+        document.documentElement.setAttribute("data-theme", saved);
+        updateToggleIcon(saved);
+      } else {
+        updateToggleIcon("dark");
+      }
+    })();
+  </script>
+
+</body>
 </html>
